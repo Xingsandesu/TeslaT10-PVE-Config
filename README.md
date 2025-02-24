@@ -46,9 +46,9 @@ pvesm add dir local-vm --content images,iso,vztmpl,backup,rootdir,snippets -prea
 ## 5. 内核管理（可选）
 ```bash
 # 安装指定版本内核
-apt-get update && apt-get install proxmox-kernel-6.8.12-4-pve
+apt-get update && apt-get install proxmox-kernel-6.8.12-8-pve
 proxmox-boot-tool kernel list
-proxmox-boot-tool kernel pin 6.8.12-4-pve
+proxmox-boot-tool kernel pin 6.8.12-8-pve
 proxmox-boot-tool refresh
 ```
 
