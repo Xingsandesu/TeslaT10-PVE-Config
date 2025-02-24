@@ -98,10 +98,49 @@ echo -e "[Service]\nEnvironment=LD_PRELOAD=/opt/vgpu_unlock-rs/target/release/li
 ## 9. vGPU 配置文件
 ```bash
 cat >/etc/vgpu_unlock/profile_override.toml<<EOF
-[profile.nvidia-262]
-framebuffer = 0x3B0000000
-pci_id = 0x1EB81310
-pci_device_id = 0x1EB8
+[profile.nvidia-256] #1G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+frl_enabled = 0
+
+[profile.nvidia-257] #2G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+frl_enabled = 0
+
+[profile.nvidia-258] #3G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+frl_enabled = 0
+
+[profile.nvidia-259] #4G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+frl_enabled = 0
+
+[profile.nvidia-261] #8G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+frl_enabled = 0
+
+[profile.nvidia-262] #16G
+num_displays = 1
+display_width = 1920
+display_height = 1080
+max_pixels = 2073600
+framebuffer = 0x3BC000000
+framebuffer_reservation = 0x44000000
+frl_enabled = 0
 EOF
 ```
 
