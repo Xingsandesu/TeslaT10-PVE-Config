@@ -19,7 +19,7 @@ mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enter
 ## 2. 安装系统依赖
 ```bash
 apt-get install -y git build-essential dkms mdevctl
-apt install pve-headers-$(uname -r)
+apt install pve-headers-6.8.12-8-pve
 ```
 
 ## 3. 网卡配置
